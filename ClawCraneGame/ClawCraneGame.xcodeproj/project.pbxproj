@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0792679EB490039DD9B /* AppDelegate.swift */; };
+		99E7A07C2679EB490039DD9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A07B2679EB490039DD9B /* SceneDelegate.swift */; };
+		99E7A07E2679EB490039DD9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A07D2679EB490039DD9B /* ViewController.swift */; };
+		99E7A0812679EB490039DD9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E7A07F2679EB490039DD9B /* Main.storyboard */; };
+		99E7A0832679EB4A0039DD9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E7A0822679EB4A0039DD9B /* Assets.xcassets */; };
+		99E7A0862679EB4A0039DD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E7A0842679EB4A0039DD9B /* LaunchScreen.storyboard */; };
+		99E7A0912679EB4A0039DD9B /* ClawCraneGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0902679EB4A0039DD9B /* ClawCraneGameTests.swift */; };
+		99E7A09C2679EB4A0039DD9B /* ClawCraneGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A09B2679EB4A0039DD9B /* ClawCraneGameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99E7A08D2679EB4A0039DD9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99E7A06E2679EB490039DD9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99E7A0752679EB490039DD9B;
+			remoteInfo = ClawCraneGame;
+		};
+		99E7A0982679EB4A0039DD9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99E7A06E2679EB490039DD9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99E7A0752679EB490039DD9B;
+			remoteInfo = ClawCraneGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99E7A0762679EB490039DD9B /* ClawCraneGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClawCraneGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99E7A0792679EB490039DD9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99E7A07B2679EB490039DD9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		99E7A07D2679EB490039DD9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99E7A0802679EB490039DD9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99E7A0822679EB4A0039DD9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99E7A0852679EB4A0039DD9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99E7A0872679EB4A0039DD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E7A08C2679EB4A0039DD9B /* ClawCraneGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClawCraneGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99E7A0902679EB4A0039DD9B /* ClawCraneGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawCraneGameTests.swift; sourceTree = "<group>"; };
+		99E7A0922679EB4A0039DD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E7A0972679EB4A0039DD9B /* ClawCraneGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClawCraneGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99E7A09B2679EB4A0039DD9B /* ClawCraneGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawCraneGameUITests.swift; sourceTree = "<group>"; };
+		99E7A09D2679EB4A0039DD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99E7A0732679EB490039DD9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E7A0892679EB4A0039DD9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E7A0942679EB4A0039DD9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99E7A06D2679EB490039DD9B = {
+			isa = PBXGroup;
+			children = (
+				99E7A0782679EB490039DD9B /* ClawCraneGame */,
+				99E7A08F2679EB4A0039DD9B /* ClawCraneGameTests */,
+				99E7A09A2679EB4A0039DD9B /* ClawCraneGameUITests */,
+				99E7A0772679EB490039DD9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99E7A0772679EB490039DD9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99E7A0762679EB490039DD9B /* ClawCraneGame.app */,
+				99E7A08C2679EB4A0039DD9B /* ClawCraneGameTests.xctest */,
+				99E7A0972679EB4A0039DD9B /* ClawCraneGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99E7A0782679EB490039DD9B /* ClawCraneGame */ = {
+			isa = PBXGroup;
+			children = (
+				99E7A0792679EB490039DD9B /* AppDelegate.swift */,
+				99E7A07B2679EB490039DD9B /* SceneDelegate.swift */,
+				99E7A07D2679EB490039DD9B /* ViewController.swift */,
+				99E7A07F2679EB490039DD9B /* Main.storyboard */,
+				99E7A0822679EB4A0039DD9B /* Assets.xcassets */,
+				99E7A0842679EB4A0039DD9B /* LaunchScreen.storyboard */,
+				99E7A0872679EB4A0039DD9B /* Info.plist */,
+			);
+			path = ClawCraneGame;
+			sourceTree = "<group>";
+		};
+		99E7A08F2679EB4A0039DD9B /* ClawCraneGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				99E7A0902679EB4A0039DD9B /* ClawCraneGameTests.swift */,
+				99E7A0922679EB4A0039DD9B /* Info.plist */,
+			);
+			path = ClawCraneGameTests;
+			sourceTree = "<group>";
+		};
+		99E7A09A2679EB4A0039DD9B /* ClawCraneGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99E7A09B2679EB4A0039DD9B /* ClawCraneGameUITests.swift */,
+				99E7A09D2679EB4A0039DD9B /* Info.plist */,
+			);
+			path = ClawCraneGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99E7A0752679EB490039DD9B /* ClawCraneGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99E7A0A02679EB4A0039DD9B /* Build configuration list for PBXNativeTarget "ClawCraneGame" */;
+			buildPhases = (
+				99E7A0722679EB490039DD9B /* Sources */,
+				99E7A0732679EB490039DD9B /* Frameworks */,
+				99E7A0742679EB490039DD9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClawCraneGame;
+			productName = ClawCraneGame;
+			productReference = 99E7A0762679EB490039DD9B /* ClawCraneGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99E7A08B2679EB4A0039DD9B /* ClawCraneGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99E7A0A32679EB4A0039DD9B /* Build configuration list for PBXNativeTarget "ClawCraneGameTests" */;
+			buildPhases = (
+				99E7A0882679EB4A0039DD9B /* Sources */,
+				99E7A0892679EB4A0039DD9B /* Frameworks */,
+				99E7A08A2679EB4A0039DD9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99E7A08E2679EB4A0039DD9B /* PBXTargetDependency */,
+			);
+			name = ClawCraneGameTests;
+			productName = ClawCraneGameTests;
+			productReference = 99E7A08C2679EB4A0039DD9B /* ClawCraneGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99E7A0962679EB4A0039DD9B /* ClawCraneGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99E7A0A62679EB4A0039DD9B /* Build configuration list for PBXNativeTarget "ClawCraneGameUITests" */;
+			buildPhases = (
+				99E7A0932679EB4A0039DD9B /* Sources */,
+				99E7A0942679EB4A0039DD9B /* Frameworks */,
+				99E7A0952679EB4A0039DD9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99E7A0992679EB4A0039DD9B /* PBXTargetDependency */,
+			);
+			name = ClawCraneGameUITests;
+			productName = ClawCraneGameUITests;
+			productReference = 99E7A0972679EB4A0039DD9B /* ClawCraneGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99E7A06E2679EB490039DD9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					99E7A0752679EB490039DD9B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					99E7A08B2679EB4A0039DD9B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 99E7A0752679EB490039DD9B;
+					};
+					99E7A0962679EB4A0039DD9B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 99E7A0752679EB490039DD9B;
+					};
+				};
+			};
+			buildConfigurationList = 99E7A0712679EB490039DD9B /* Build configuration list for PBXProject "ClawCraneGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99E7A06D2679EB490039DD9B;
+			productRefGroup = 99E7A0772679EB490039DD9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99E7A0752679EB490039DD9B /* ClawCraneGame */,
+				99E7A08B2679EB4A0039DD9B /* ClawCraneGameTests */,
+				99E7A0962679EB4A0039DD9B /* ClawCraneGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99E7A0742679EB490039DD9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E7A0862679EB4A0039DD9B /* LaunchScreen.storyboard in Resources */,
+				99E7A0832679EB4A0039DD9B /* Assets.xcassets in Resources */,
+				99E7A0812679EB490039DD9B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E7A08A2679EB4A0039DD9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E7A0952679EB4A0039DD9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99E7A0722679EB490039DD9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E7A07E2679EB490039DD9B /* ViewController.swift in Sources */,
+				99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */,
+				99E7A07C2679EB490039DD9B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E7A0882679EB4A0039DD9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E7A0912679EB4A0039DD9B /* ClawCraneGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99E7A0932679EB4A0039DD9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E7A09C2679EB4A0039DD9B /* ClawCraneGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99E7A08E2679EB4A0039DD9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99E7A0752679EB490039DD9B /* ClawCraneGame */;
+			targetProxy = 99E7A08D2679EB4A0039DD9B /* PBXContainerItemProxy */;
+		};
+		99E7A0992679EB4A0039DD9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99E7A0752679EB490039DD9B /* ClawCraneGame */;
+			targetProxy = 99E7A0982679EB4A0039DD9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99E7A07F2679EB490039DD9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99E7A0802679EB490039DD9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99E7A0842679EB4A0039DD9B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99E7A0852679EB4A0039DD9B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99E7A09E2679EB4A0039DD9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99E7A09F2679EB4A0039DD9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99E7A0A12679EB4A0039DD9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = ClawCraneGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baecheese.com.ClawCraneGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99E7A0A22679EB4A0039DD9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = ClawCraneGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baecheese.com.ClawCraneGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99E7A0A42679EB4A0039DD9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = ClawCraneGameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baecheese.com.ClawCraneGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClawCraneGame.app/ClawCraneGame";
+			};
+			name = Debug;
+		};
+		99E7A0A52679EB4A0039DD9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = ClawCraneGameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baecheese.com.ClawCraneGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClawCraneGame.app/ClawCraneGame";
+			};
+			name = Release;
+		};
+		99E7A0A72679EB4A0039DD9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = ClawCraneGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baecheese.com.ClawCraneGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClawCraneGame;
+			};
+			name = Debug;
+		};
+		99E7A0A82679EB4A0039DD9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = ClawCraneGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baecheese.com.ClawCraneGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClawCraneGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99E7A0712679EB490039DD9B /* Build configuration list for PBXProject "ClawCraneGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99E7A09E2679EB4A0039DD9B /* Debug */,
+				99E7A09F2679EB4A0039DD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99E7A0A02679EB4A0039DD9B /* Build configuration list for PBXNativeTarget "ClawCraneGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99E7A0A12679EB4A0039DD9B /* Debug */,
+				99E7A0A22679EB4A0039DD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99E7A0A32679EB4A0039DD9B /* Build configuration list for PBXNativeTarget "ClawCraneGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99E7A0A42679EB4A0039DD9B /* Debug */,
+				99E7A0A52679EB4A0039DD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99E7A0A62679EB4A0039DD9B /* Build configuration list for PBXNativeTarget "ClawCraneGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99E7A0A72679EB4A0039DD9B /* Debug */,
+				99E7A0A82679EB4A0039DD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99E7A06E2679EB490039DD9B /* Project object */;
+}
