@@ -9,16 +9,16 @@ import Foundation
 
 class Board {
     
-    private var _columns: [[Doll]]
-    private var _rows: [[Doll]]
+    private var _columns: [[Space]]
+    private var _rows: [[Space]]
     private var _basket: [Doll] = []
     
     
-    var columns: [[Doll]] {
+    var columns: [[Space]] {
         return _columns
     }
     
-    var rows: [[Doll]] {
+    var rows: [[Space]] {
         return _rows
     }
     
@@ -28,15 +28,15 @@ class Board {
     
     init(_ board: [[Int]]) {
         // board 배열은 2차원 배열로 크기는 "5 x 5" 이상 "30 x 30" 이하입니다.
-        var columns: [[Doll]] = []
-        var rows: [[Doll]] = []
+        var columns: [[Space]] = []
+        var rows: [[Space]] = []
         for columnIndex in 0...board.count - 1 {
-            var column: [Doll] = []
+            var column: [Space] = []
             for rowIndex in 0...board[columnIndex].count-1 {
-                let currentCell = Doll(
+                let currentCell = Space(
                     rowIndex: rowIndex,
                     columnIndex: columnIndex,
-                    value: board[columnIndex][rowIndex]
+                    doll: Doll(value: board[columnIndex][rowIndex])
                 )
                 column.append(currentCell)
                 if rowIndex <= rows.count - 1 {
@@ -51,8 +51,17 @@ class Board {
         self._rows = rows
     }
     
-    func moveToBasket(to index: Int) {
-        
+    /// "toColumn" is number. number start 1. not index.
+    func last(toColumnNumber: Int) -> Doll? {
+        let index = toColumnNumber - 1
+        for doll in columns[index] {
+//            doll.
+        }
+        return nil
+    }
+    
+    func moveToBasket(toColumn: Int) -> Doll? {
+        return nil
     }
     
 }

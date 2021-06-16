@@ -35,8 +35,6 @@ class BoardTests: XCTestCase {
             }
         }
     }
-    
-    func test
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
