@@ -15,6 +15,9 @@
 		99E7A0862679EB4A0039DD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E7A0842679EB4A0039DD9B /* LaunchScreen.storyboard */; };
 		99E7A0912679EB4A0039DD9B /* ClawCraneGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0902679EB4A0039DD9B /* ClawCraneGameTests.swift */; };
 		99E7A09C2679EB4A0039DD9B /* ClawCraneGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A09B2679EB4A0039DD9B /* ClawCraneGameUITests.swift */; };
+		99E7A0B12679EB850039DD9B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0B02679EB850039DD9B /* Board.swift */; };
+		99E7A0BE2679EBFA0039DD9B /* Doll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0BD2679EBFA0039DD9B /* Doll.swift */; };
+		99E7A0C92679EEE80039DD9B /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0C82679EEE80039DD9B /* BoardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		99E7A0972679EB4A0039DD9B /* ClawCraneGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClawCraneGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E7A09B2679EB4A0039DD9B /* ClawCraneGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawCraneGameUITests.swift; sourceTree = "<group>"; };
 		99E7A09D2679EB4A0039DD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E7A0B02679EB850039DD9B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		99E7A0BD2679EBFA0039DD9B /* Doll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doll.swift; sourceTree = "<group>"; };
+		99E7A0C82679EEE80039DD9B /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				99E7A0792679EB490039DD9B /* AppDelegate.swift */,
 				99E7A07B2679EB490039DD9B /* SceneDelegate.swift */,
 				99E7A07D2679EB490039DD9B /* ViewController.swift */,
+				99E7A0AC2679EB730039DD9B /* Model */,
 				99E7A07F2679EB490039DD9B /* Main.storyboard */,
 				99E7A0822679EB4A0039DD9B /* Assets.xcassets */,
 				99E7A0842679EB4A0039DD9B /* LaunchScreen.storyboard */,
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				99E7A0902679EB4A0039DD9B /* ClawCraneGameTests.swift */,
+				99E7A0C82679EEE80039DD9B /* BoardTests.swift */,
 				99E7A0922679EB4A0039DD9B /* Info.plist */,
 			);
 			path = ClawCraneGameTests;
@@ -126,6 +134,15 @@
 				99E7A09D2679EB4A0039DD9B /* Info.plist */,
 			);
 			path = ClawCraneGameUITests;
+			sourceTree = "<group>";
+		};
+		99E7A0AC2679EB730039DD9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99E7A0B02679EB850039DD9B /* Board.swift */,
+				99E7A0BD2679EBFA0039DD9B /* Doll.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99E7A07E2679EB490039DD9B /* ViewController.swift in Sources */,
+				99E7A0BE2679EBFA0039DD9B /* Doll.swift in Sources */,
 				99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */,
+				99E7A0B12679EB850039DD9B /* Board.swift in Sources */,
 				99E7A07C2679EB490039DD9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E7A0C92679EEE80039DD9B /* BoardTests.swift in Sources */,
 				99E7A0912679EB4A0039DD9B /* ClawCraneGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
