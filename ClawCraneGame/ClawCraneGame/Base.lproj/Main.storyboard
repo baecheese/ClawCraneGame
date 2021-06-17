@@ -13,39 +13,123 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClawCraneGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="ClawCraneGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fruit poping!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OV-qm-LbI">
-                                <rect key="frame" x="54" y="10" width="788" height="373"/>
-                                <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6d-0J-UKV">
+                                <rect key="frame" x="238" y="51.5" width="420" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-zw-yca">
+                                        <rect key="frame" x="0.0" y="0.0" width="420" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alien-pixelated" translatesAutoresizingMaskIntoConstraints="NO" id="mDu-Be-tPw">
+                                                <rect key="frame" x="0.0" y="0.0" width="420" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Khp-Fs-VYN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsK-XQ-47a" customClass="MainGameTypeView" customModule="ClawCraneGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="420" height="130"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KyZ-d7-hpP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="420" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFM-yO-Az9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="140" height="130"/>
+                                                                <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="28"/>
+                                                                <state key="normal" title="&lt;">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onTouchDecreaseGameType:" destination="RsK-XQ-47a" eventType="touchUpInside" id="eg6-Mf-cWw"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 x 5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdm-BG-ERq">
+                                                                <rect key="frame" x="140" y="0.0" width="140" height="130"/>
+                                                                <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="56"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaW-9s-XDq">
+                                                                <rect key="frame" x="280" y="0.0" width="140" height="130"/>
+                                                                <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="28"/>
+                                                                <state key="normal" title="&gt;">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onTouchIncreaseGameType:" destination="RsK-XQ-47a" eventType="touchUpInside" id="6c9-nl-lhr"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="KyZ-d7-hpP" firstAttribute="leading" secondItem="RsK-XQ-47a" secondAttribute="leading" id="NTq-Ke-mwX"/>
+                                                    <constraint firstItem="KyZ-d7-hpP" firstAttribute="top" secondItem="RsK-XQ-47a" secondAttribute="top" id="RKa-66-k5P"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KyZ-d7-hpP" secondAttribute="bottom" id="X4d-h8-esN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KyZ-d7-hpP" secondAttribute="trailing" id="u6x-rr-pv9"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="typeLabel" destination="Bdm-BG-ERq" id="EO1-I5-uFF"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-qK-VwZ">
+                                        <rect key="frame" x="10" y="230" width="400" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SgK-cq-fdf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="28"/>
+                                        <state key="normal" title="start game">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTouchStartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfc-Oe-pBj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kM4-qK-VwZ" firstAttribute="leading" secondItem="H6d-0J-UKV" secondAttribute="leading" constant="10" id="1Es-XL-emj"/>
+                                    <constraint firstItem="kM4-qK-VwZ" firstAttribute="top" secondItem="g0z-zw-yca" secondAttribute="bottom" constant="30" id="3Uw-rW-xyE"/>
+                                    <constraint firstAttribute="trailing" secondItem="kM4-qK-VwZ" secondAttribute="trailing" constant="10" id="AdQ-ab-pzd"/>
+                                    <constraint firstItem="g0z-zw-yca" firstAttribute="top" secondItem="H6d-0J-UKV" secondAttribute="top" id="Anm-h0-dNV"/>
+                                    <constraint firstItem="g0z-zw-yca" firstAttribute="leading" secondItem="H6d-0J-UKV" secondAttribute="leading" id="V3A-uM-Ww7"/>
+                                    <constraint firstAttribute="trailing" secondItem="g0z-zw-yca" secondAttribute="trailing" id="heQ-y0-l02"/>
+                                    <constraint firstAttribute="bottom" secondItem="kM4-qK-VwZ" secondAttribute="bottom" constant="10" id="nlO-GY-KBO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8OV-qm-LbI" secondAttribute="bottom" constant="10" id="JmO-jk-Rxm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8OV-qm-LbI" secondAttribute="trailing" constant="10" id="YDp-oT-8dG"/>
-                            <constraint firstItem="8OV-qm-LbI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ysa-lF-T0I"/>
-                            <constraint firstItem="8OV-qm-LbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="rP2-kS-MC4"/>
+                            <constraint firstItem="H6d-0J-UKV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1ez-Y6-IFc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H6d-0J-UKV" secondAttribute="trailing" constant="30" id="3fn-eL-r4h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H6d-0J-UKV" secondAttribute="bottom" constant="30" id="7Vy-yQ-NUm"/>
+                            <constraint firstItem="H6d-0J-UKV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a3L-ah-une"/>
+                            <constraint firstItem="H6d-0J-UKV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fb6-b8-fyP"/>
+                            <constraint firstItem="H6d-0J-UKV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nJ9-IP-XWQ"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="77"/>
+            <point key="canvasLocation" x="136.60714285714286" y="76.811594202898561"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="alien-pixelated" width="170.5" height="170.5"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
