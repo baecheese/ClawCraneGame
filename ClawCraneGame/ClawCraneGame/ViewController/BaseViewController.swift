@@ -8,13 +8,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    var isFirstLayoutLoad: Bool = true
 
     /*
     // MARK: - Navigation

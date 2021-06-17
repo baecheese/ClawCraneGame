@@ -17,8 +17,8 @@ class Space {
         return "\((doll?.type.icon) ?? "⬛️")"
     }
     
-    var position: (row: Int, column: Int) {
-        return (row: _rowIndex, column: _columnIndex)
+    var position: (column: Int, row: Int) {
+        return (column: _columnIndex, row: _rowIndex)
     }
     
     var isEmpty: Bool {

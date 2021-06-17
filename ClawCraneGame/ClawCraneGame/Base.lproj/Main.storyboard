@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6d-0J-UKV">
-                                <rect key="frame" x="238" y="51.5" width="420" height="290"/>
+                                <rect key="frame" x="238" y="41.5" width="420" height="310"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-zw-yca">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="200"/>
@@ -81,10 +81,10 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-qK-VwZ">
-                                        <rect key="frame" x="10" y="230" width="400" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <rect key="frame" x="10" y="230" width="400" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="SgK-cq-fdf"/>
+                                            <constraint firstAttribute="height" constant="70" id="SgK-cq-fdf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="28"/>
                                         <state key="normal" title="start game">
@@ -107,7 +107,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="H6d-0J-UKV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1ez-Y6-IFc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H6d-0J-UKV" secondAttribute="trailing" constant="30" id="3fn-eL-r4h"/>
@@ -169,18 +169,64 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3f6-pl-Fot">
                                 <rect key="frame" x="44" y="60" width="708" height="333"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVK-od-sRm">
                                 <rect key="frame" x="752" y="60" width="100" height="333"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXm-rc-He6">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="111"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="41"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTouchLeft:" destination="xTH-C8-scB" eventType="touchUpInside" id="Eh8-4t-raD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXH-po-6EH">
+                                        <rect key="frame" x="0.0" y="111" width="100" height="111"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="41"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTouchRight:" destination="xTH-C8-scB" eventType="touchUpInside" id="HRQ-Oy-YVm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQc-ai-Yfh">
+                                        <rect key="frame" x="0.0" y="222" width="100" height="111"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="41"/>
+                                        <state key="normal" title="get">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTouchCatch:" destination="xTH-C8-scB" eventType="touchUpInside" id="UQ0-Fa-9IZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rQc-ai-Yfh" secondAttribute="trailing" id="04a-O0-kzf"/>
+                                    <constraint firstAttribute="trailing" secondItem="MXm-rc-He6" secondAttribute="trailing" id="8uv-cv-Ne8"/>
+                                    <constraint firstItem="MXm-rc-He6" firstAttribute="top" secondItem="fVK-od-sRm" secondAttribute="top" id="Fsj-z6-l5V"/>
+                                    <constraint firstItem="RXH-po-6EH" firstAttribute="leading" secondItem="fVK-od-sRm" secondAttribute="leading" id="H48-Il-LUm"/>
+                                    <constraint firstItem="RXH-po-6EH" firstAttribute="top" secondItem="MXm-rc-He6" secondAttribute="bottom" id="Kqn-MK-Mju"/>
+                                    <constraint firstItem="RXH-po-6EH" firstAttribute="height" secondItem="MXm-rc-He6" secondAttribute="height" id="Qkk-5j-e6x"/>
+                                    <constraint firstItem="rQc-ai-Yfh" firstAttribute="leading" secondItem="fVK-od-sRm" secondAttribute="leading" id="WB1-Eg-jOf"/>
+                                    <constraint firstItem="MXm-rc-He6" firstAttribute="leading" secondItem="fVK-od-sRm" secondAttribute="leading" id="cBj-GM-pmG"/>
+                                    <constraint firstItem="MXm-rc-He6" firstAttribute="height" secondItem="fVK-od-sRm" secondAttribute="height" multiplier="1:3" id="cQ6-ff-lYM"/>
+                                    <constraint firstAttribute="trailing" secondItem="RXH-po-6EH" secondAttribute="trailing" id="f07-Tg-Eye"/>
                                     <constraint firstAttribute="width" constant="100" id="f5Z-qz-uO6"/>
+                                    <constraint firstAttribute="bottom" secondItem="rQc-ai-Yfh" secondAttribute="bottom" id="qxa-fA-uf4"/>
+                                    <constraint firstItem="rQc-ai-Yfh" firstAttribute="top" secondItem="RXH-po-6EH" secondAttribute="bottom" id="u5u-Bc-0gb"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1k-N9-CO2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="fVK-od-sRm" firstAttribute="top" secondItem="AiM-uw-AFS" secondAttribute="bottom" id="Aff-Zb-ekM"/>
                             <constraint firstItem="3f6-pl-Fot" firstAttribute="leading" secondItem="u1k-N9-CO2" secondAttribute="leading" id="DN5-gw-5E3"/>
@@ -198,6 +244,7 @@
                     </view>
                     <connections>
                         <outlet property="boardBackgroundView" destination="3f6-pl-Fot" id="9Dv-WV-o4e"/>
+                        <outlet property="scoreLabel" destination="nia-V0-Ty0" id="gh2-CT-nat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSU-Mk-Rdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -207,8 +254,8 @@
     </scenes>
     <resources>
         <image name="alien-pixelated" width="170.5" height="170.5"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -219,11 +266,11 @@
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
