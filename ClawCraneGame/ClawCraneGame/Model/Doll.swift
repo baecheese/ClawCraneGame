@@ -9,27 +9,70 @@ import Foundation
 
 class Doll {
     
-    private var rowIndex: Int
-    private var columnIndex: Int
-    var value: Int
-    
-    init(rowIndex: Int = -1, columnIndex: Int = -1, value: Int) {
-        self.rowIndex = rowIndex
-        self.columnIndex = columnIndex
-        self.value = value
+    enum State {
+        case inSpace
+        case outSpace
+        case inBasket
+        case hiddenBasket
     }
     
-    func update(rowIndex: Int) {
-        self.rowIndex = rowIndex
+    enum DollType: Int {
+        case apple = 1
+        case pear = 2
+        case peach = 3
+        case melon = 4
+        case lemon = 5
+        
+        var icon: String {
+            switch self {
+                case .apple:
+                    return "🍎"
+                case .pear:
+                    return "🍐"
+                case .peach:
+                    return "🍑"
+                case .melon:
+                    return "🍈"
+                case .lemon:
+                    return "🍋"
+            }
+        }
+        
+        var number: Int {
+            return self.rawValue
+        }
+        
+        var score: Int {
+            return 1
+        }
     }
     
-    func update(columnIndex: Int) {
-        self.columnIndex = columnIndex
+    private var _type: DollType
+    private var _state: State = .inSpace
+    
+    var type: DollType {
+        return _type
     }
     
-    func move() {
-        self.rowIndex = -1
-        self.columnIndex = -1
+    var state: State {
+        return _state
+    }
+    
+    init?(value: Int) {
+        guard 0 < value else { return nil }
+        self._type = DollType(rawValue: value)!
+    }
+    
+    func update(_ state: State) {
+        self._state = state
+    }
+    
+}
+
+extension Doll: Equatable {
+    
+    static func == (lhs: Doll, rhs: Doll) -> Bool {
+        return lhs.type.number == rhs.type.number
     }
     
 }
