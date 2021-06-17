@@ -17,10 +17,20 @@ class Space {
         return (row: _rowIndex, column: _columnIndex)
     }
     
+    var isEmpty: Bool {
+        return nil == doll
+    }
+    
     init(rowIndex: Int, columnIndex: Int, doll: Doll?) {
         self._rowIndex = rowIndex
         self._columnIndex = columnIndex
         self.doll = 0 == doll?.value ? nil : doll
+    }
+    
+    func pop() -> Doll? {
+        let doll = self.doll
+        self.doll = nil
+        return doll
     }
     
 }
