@@ -16,6 +16,7 @@ class MainViewController: BaseViewController {
     }
 
     @IBAction func onTouchStartGame(_ sender: UIButton) {
-        
+        guard let boardViewController = storyboard?.instantiateViewController(withIdentifier: BoardViewController.className) else { return }
+        present(boardViewController, animated: true, completion: nil)
     }
 }
