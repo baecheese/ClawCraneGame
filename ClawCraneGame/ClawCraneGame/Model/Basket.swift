@@ -22,8 +22,10 @@ class Basket {
     func add(doll: Doll) {
         if _dolls.last == doll {
             _disappearDolls.append(_dolls.removeLast())
+            _disappearDolls.last?.update(.removed)
         } else {
             _dolls.append(doll)
+            _dolls.last?.update(.inBasket)
         }
     }
 }

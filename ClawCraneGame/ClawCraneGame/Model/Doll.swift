@@ -21,6 +21,7 @@ class Doll {
         case pear = 2
         case peach = 3
         case melon = 4
+        case lemon = 5
         
         var number: Int {
             return self.rawValue

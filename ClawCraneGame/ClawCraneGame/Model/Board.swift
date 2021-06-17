@@ -25,40 +25,44 @@ class Board {
         return _basket.dolls
     }
     
+    var score: Int {
+        return _basket.score
+    }
+    
     init(_ board: [[Int]]) {
         // board 배열은 2차원 배열로 크기는 "5 x 5" 이상 "30 x 30" 이하입니다.
         var columns: [[Space]] = []
         var rows: [[Space]] = []
-        for columnIndex in 0...board.count - 1 {
-            var column: [Space] = []
-            for rowIndex in 0...board[columnIndex].count-1 {
-                let currentSpace = Space(
-                    rowIndex: rowIndex,
-                    columnIndex: columnIndex,
-                    doll: Doll(value: board[columnIndex][rowIndex])
-                )
-                column.append(currentSpace)
-                if rowIndex <= rows.count - 1 {
-                    rows[rowIndex].append(currentSpace)
+        for rowIndex in 0...board.count-1 {
+            var row: [Space] = []
+            for columnIndex in 0...board[rowIndex].count - 1 {
+                let doll = Doll(value: board[rowIndex][columnIndex])
+                let space = Space(rowIndex: rowIndex, columnIndex: columnIndex, doll: doll)
+                // row cache
+                row.append(space)
+                // column cache
+                if columns.indices.contains(columnIndex) {
+                    columns[columnIndex].append(space)
                 } else {
-                    rows.append([currentSpace])
+                    columns.append([space])
                 }
             }
-            columns.append(column)
+            rows.append(row)
         }
+        
         self._columns = columns
         self._rows = rows
         self._basket = Basket()
     }
     
     /// "toColumn" is number. number start 1. not index.
-    func last(toColumnNumber: Int) -> Space? {
-        guard 0 < toColumnNumber, let index = lastIndexToFillSpace(toColumnNumber: toColumnNumber) else { return nil }
-        return columns[toColumnNumber - 1][index]
+    func lastToFillSapace(columnNumber: Int) -> Space? {
+        guard 0 < columnNumber, let index = lastIndexToFillSpace(columnNumber: columnNumber) else { return nil }
+        return columns[columnNumber - 1][index]
     }
     
-    func lastIndexToFillSpace(toColumnNumber: Int) -> Int? {
-        let columnIndex = toColumnNumber - 1
+    func lastIndexToFillSpace(columnNumber: Int) -> Int? {
+        let columnIndex = columnNumber - 1
         let currentColumn = columns[columnIndex]
         for index in 0...currentColumn.count - 1 {
             guard false == currentColumn[index].isEmpty else { continue }
@@ -68,10 +72,10 @@ class Board {
     }
     
     @discardableResult
-    func moveToBasket(toColumnNumber: Int) -> Doll? {
-        guard 0 < toColumnNumber,
-              let index = lastIndexToFillSpace(toColumnNumber: toColumnNumber),
-              let lastDoll = columns[toColumnNumber - 1][index].pop() else { return nil }
+    func moveLastDollToBasket(columnNumber: Int) -> Doll? {
+        guard 0 < columnNumber,
+              let index = lastIndexToFillSpace(columnNumber: columnNumber),
+              let lastDoll = columns[columnNumber - 1][index].pop() else { return nil }
         _basket.add(doll: lastDoll)
         return lastDoll
     }
