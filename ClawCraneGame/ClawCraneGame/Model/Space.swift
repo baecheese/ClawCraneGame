@@ -24,11 +24,12 @@ class Space {
     init(rowIndex: Int, columnIndex: Int, doll: Doll?) {
         self._rowIndex = rowIndex
         self._columnIndex = columnIndex
-        self.doll = 0 == doll?.value ? nil : doll
+        self.doll = doll
     }
     
     func pop() -> Doll? {
         let doll = self.doll
+        doll?.update(.outSpace)
         self.doll = nil
         return doll
     }
