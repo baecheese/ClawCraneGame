@@ -7,11 +7,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="DungGeunMo.ttf">
-            <string>DungGeunMo</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -21,20 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38F-gY-bcn">
-                                <rect key="frame" x="64" y="20" width="768" height="393"/>
-                                <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="39"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alien-pixelated" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-Lq-Dxd">
+                                <rect key="frame" x="373" y="111.5" width="150" height="170.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="PgA-u3-QKh"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
-                            <constraint firstItem="38F-gY-bcn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="5JQ-He-q9y"/>
-                            <constraint firstItem="38F-gY-bcn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kS6-Dg-Loc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="38F-gY-bcn" secondAttribute="trailing" constant="20" id="lUV-9O-vry"/>
-                            <constraint firstItem="38F-gY-bcn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lWU-2j-BER"/>
+                            <constraint firstItem="fO6-Lq-Dxd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="SCl-La-klo"/>
+                            <constraint firstItem="fO6-Lq-Dxd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d2h-Pe-Ha8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,6 +37,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alien-pixelated" width="170.5" height="170.5"/>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

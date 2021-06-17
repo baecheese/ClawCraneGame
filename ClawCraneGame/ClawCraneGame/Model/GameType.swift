@@ -42,6 +42,7 @@ class GameType {
         return lineCount
     }
     
+    // TODO: 게임 생성 로직 - HARD CODE
     func random() -> Board {
         return Board([
             [0,0,0,0,0],
