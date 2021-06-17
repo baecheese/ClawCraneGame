@@ -13,6 +13,10 @@ class Space {
     private var _columnIndex: Int
     var doll: Doll? = nil
     
+    var description: String {
+        return "\((doll?.type.icon) ?? "⬛️")"
+    }
+    
     var position: (row: Int, column: Int) {
         return (row: _rowIndex, column: _columnIndex)
     }

@@ -29,6 +29,18 @@ class Board {
         return _basket.score
     }
     
+    var description: String {
+        var log: String = "[Board]\n"
+        for row in rows {
+            for space in row {
+                log += space.description
+            }
+            log += "\n"
+        }
+        let basket: String = "[Basket]\n\(_basket.description)"
+        return log + basket
+    }
+    
     init(_ board: [[Int]]) {
         // board 배열은 2차원 배열로 크기는 "5 x 5" 이상 "30 x 30" 이하입니다.
         var columns: [[Space]] = []

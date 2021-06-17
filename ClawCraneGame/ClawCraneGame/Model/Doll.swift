@@ -23,6 +23,21 @@ class Doll {
         case melon = 4
         case lemon = 5
         
+        var icon: String {
+            switch self {
+                case .apple:
+                    return "🍎"
+                case .pear:
+                    return "🍐"
+                case .peach:
+                    return "🍑"
+                case .melon:
+                    return "🍈"
+                case .lemon:
+                    return "🍋"
+            }
+        }
+        
         var number: Int {
             return self.rawValue
         }
