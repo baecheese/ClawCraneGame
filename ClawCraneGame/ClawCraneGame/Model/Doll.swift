@@ -13,7 +13,7 @@ class Doll {
         case inSpace
         case outSpace
         case inBasket
-        case removed
+        case hiddenBasket
     }
     
     enum DollType: Int {
