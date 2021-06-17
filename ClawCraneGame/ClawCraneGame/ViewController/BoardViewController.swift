@@ -8,25 +8,24 @@
 import UIKit
 
 class BoardViewController: BaseViewController {
-
+    
+    @IBOutlet weak var boardBackgroundView: UIView?
+    private var boardView: BoardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setDefaultContents()
+    }
+    
+    func setDefaultContents() {
+        boardView = BoardView()
+        boardView.set(board: gameType.random())
+        boardBackgroundView?.addSubview(boardView)
+        boardView.bindFrameToSuperviewBounds()
     }
     
     @IBAction func onTouchBackToMain(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

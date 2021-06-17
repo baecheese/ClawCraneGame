@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9904A374267B4EF500D6673D /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904A373267B4EF500D6673D /* BoardView.swift */; };
+		9904A37E267B4F1D00D6673D /* Space.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9904A37D267B4F1D00D6673D /* Space.xib */; };
+		9904A396267B54E100D6673D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904A395267B54E100D6673D /* UIView.swift */; };
 		990955552679F6920053EEB2 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990955542679F6920053EEB2 /* Space.swift */; };
 		9909555A267B12C40053EEB2 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095559267B12C40053EEB2 /* Basket.swift */; };
 		9909556C267B388A0053EEB2 /* DungGeunMo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9909556B267B388A0053EEB2 /* DungGeunMo.ttf */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9904A373267B4EF500D6673D /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		9904A37D267B4F1D00D6673D /* Space.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Space.xib; sourceTree = "<group>"; };
+		9904A395267B54E100D6673D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		990955542679F6920053EEB2 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		99095559267B12C40053EEB2 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		9909556B267B388A0053EEB2 /* DungGeunMo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DungGeunMo.ttf; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 			children = (
 				9909558C267B431F0053EEB2 /* MainGameTypeView.swift */,
 				99095597267B44FC0053EEB2 /* MainGameTypeViewModel.swift */,
+				9904A373267B4EF500D6673D /* BoardView.swift */,
+				9904A37D267B4F1D00D6673D /* Space.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				99095579267B41F30053EEB2 /* NSObject.swift */,
+				9904A395267B54E100D6673D /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99E7A0862679EB4A0039DD9B /* LaunchScreen.storyboard in Resources */,
+				9904A37E267B4F1D00D6673D /* Space.xib in Resources */,
 				99E7A0832679EB4A0039DD9B /* Assets.xcassets in Resources */,
 				99E7A0812679EB490039DD9B /* Main.storyboard in Resources */,
 				9909556C267B388A0053EEB2 /* DungGeunMo.ttf in Resources */,
@@ -334,8 +344,10 @@
 				9909555A267B12C40053EEB2 /* Basket.swift in Sources */,
 				990955552679F6920053EEB2 /* Space.swift in Sources */,
 				99095592267B43520053EEB2 /* GameType.swift in Sources */,
+				9904A374267B4EF500D6673D /* BoardView.swift in Sources */,
 				990955AD267B49190053EEB2 /* BoardViewController.swift in Sources */,
 				99095598267B44FC0053EEB2 /* MainGameTypeViewModel.swift in Sources */,
+				9904A396267B54E100D6673D /* UIView.swift in Sources */,
 				99095582267B42120053EEB2 /* BaseViewController.swift in Sources */,
 				99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */,
 				99E7A0B12679EB850039DD9B /* Board.swift in Sources */,
