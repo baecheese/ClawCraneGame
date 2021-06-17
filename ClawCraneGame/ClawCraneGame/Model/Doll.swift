@@ -9,19 +9,46 @@ import Foundation
 
 class Doll {
     
-    private var _value: Int
-    
-    var value: Int {
-        return _value
+    enum State {
+        case inSpace
+        case outSpace
+        case inBasket
+        case removed
     }
     
-    // TODO: 캐릭터 이름
-    //    enum Type {
-    //        case
-    //    }
+    enum DollType: Int {
+        case apple = 1
+        case pear = 2
+        case peach = 3
+        case melon = 4
+        
+        var number: Int {
+            return self.rawValue
+        }
+        
+        var score: Int {
+            return 1
+        }
+    }
     
-    init(value: Int) {
-        self._value = value
+    private var _type: DollType
+    private var _state: State = .inSpace
+    
+    var type: DollType {
+        return _type
+    }
+    
+    var state: State {
+        return _state
+    }
+    
+    init?(value: Int) {
+        guard 0 < value else { return nil }
+        self._type = DollType(rawValue: value)!
+    }
+    
+    func update(_ state: State) {
+        self._state = state
     }
     
 }
@@ -29,7 +56,7 @@ class Doll {
 extension Doll: Equatable {
     
     static func == (lhs: Doll, rhs: Doll) -> Bool {
-        return lhs.value == rhs.value
+        return lhs.type.number == rhs.type.number
     }
     
     
