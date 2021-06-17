@@ -16,11 +16,11 @@ class Basket {
     }
     
     var score: Int {
-        _disappearDolls.reduce(0) { $0.ty }
+        return (_disappearDolls.reduce(0, { $0 + $1.type.score })) * 2
     }
     
-    func append(doll: Doll) -> Int {
-        if _dolls.last?.value == doll.value {
+    func add(doll: Doll) {
+        if _dolls.last == doll {
             _disappearDolls.append(_dolls.removeLast())
         } else {
             _dolls.append(doll)
