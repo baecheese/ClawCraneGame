@@ -35,7 +35,7 @@ class BoardViewModel {
         //board stack view
         parent.boardStackView = UIStackView()
         parent.addSubview(parent.boardStackView)
-        parent.boardStackView.bindFrameToSuperviewBounds(top: 0.0, leading: 0.0, trailing: basketWidth, bottom: 0.0)
+        parent.boardStackView.bindFrameToSuperviewBounds(top: 0.0, leading: 0.0, trailing: basketWidth + 10.0, bottom: 0.0)
         parent.boardStackView?.axis = .horizontal
         parent.boardStackView?.alignment = .fill
         parent.boardStackView?.distribution = .fillEqually
@@ -65,7 +65,7 @@ class BoardViewModel {
         parent.basketStackView?.spacing = 1.0
         for index in 0...board.basket.max - 1 {
             let spaceView = SpaceView.instanceFromNib()
-            let space = Space(rowIndex: index, columnIndex: 0, doll: nil)
+            let space = Space(rowIndex: index, columnIndex: 0, doll: nil, in: .inBasket)
             spaceView.setContents(space: space)
             parent.basketStackView?.addArrangedSubview(spaceView)
         }

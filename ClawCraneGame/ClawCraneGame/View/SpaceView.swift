@@ -13,6 +13,7 @@ protocol SpaceViewDelegate {
 
 class SpaceView: UIView {
 
+    @IBOutlet weak var backgroundImage: UIImageView?
     @IBOutlet weak var iconImage: UIImageView?
     @IBOutlet weak var bombImage: UIImageView?
     @IBOutlet weak var positionLabel: UILabel?

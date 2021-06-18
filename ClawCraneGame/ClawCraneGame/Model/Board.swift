@@ -59,7 +59,7 @@ class Board {
             var row: [Space] = []
             for columnIndex in 0...board[rowIndex].count - 1 {
                 let doll = Doll(value: board[rowIndex][columnIndex])
-                let space = Space(rowIndex: rowIndex, columnIndex: columnIndex, doll: doll)
+                let space = Space(rowIndex: rowIndex, columnIndex: columnIndex, doll: doll, in: .inBoard)
                 // row cache
                 row.append(space)
                 // column cache

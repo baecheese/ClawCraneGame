@@ -9,6 +9,20 @@ import UIKit
 
 class Space {
     
+    enum SpaceType {
+        case inBoard
+        case inBasket
+        
+        var image: UIImage? {
+            switch self {
+            case .inBoard:
+                return UIImage(named: "icon_wall")
+            case .inBasket:
+                return UIImage(named: "icon_green")
+            }
+        }
+    }
+    
     enum State {
         case empty
         case fill(image: UIImage?)
@@ -29,6 +43,7 @@ class Space {
     private var _rowIndex: Int
     private var _columnIndex: Int
     
+    let type: SpaceType
     var doll: Doll? = nil
     
     var description: String {
@@ -43,10 +58,11 @@ class Space {
         return nil == doll
     }
     
-    init(rowIndex: Int, columnIndex: Int, doll: Doll?) {
+    init(rowIndex: Int, columnIndex: Int, doll: Doll?, in type: SpaceType) {
         self._rowIndex = rowIndex
         self._columnIndex = columnIndex
         self.doll = doll
+        self.type = type
     }
     
     func pop() -> Doll? {
