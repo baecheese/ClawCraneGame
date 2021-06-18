@@ -15,7 +15,7 @@ class Basket {
     
     private var _dolls: [Doll] = []
     private var _disappearDolls: [Doll] = []
-    private var _max: Int = 10
+    private var _max: Int
     
     var lastIndex_vaildInputDoll: Int? {
         guard _dolls.count <= max else { return nil }
@@ -36,6 +36,10 @@ class Basket {
     
     var description: String {
         return "dolls : \(dolls.map { $0.type.icon })\ndisappearDolls: \(_disappearDolls.map { return $0.type.icon })\nscore: \(score)"
+    }
+    
+    init(length: Int) {
+        self._max = length
     }
     
     func add(doll: Doll) throws {

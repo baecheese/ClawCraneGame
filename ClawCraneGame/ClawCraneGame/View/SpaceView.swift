@@ -15,6 +15,7 @@ class SpaceView: UIView {
 
     @IBOutlet weak var iconImage: UIImageView?
     @IBOutlet weak var bombImage: UIImageView?
+    @IBOutlet weak var positionLabel: UILabel?
     
     private var viewModel: SpaceViewModel!
     
@@ -25,6 +26,7 @@ class SpaceView: UIView {
     func setContents(space: Space) {
         viewModel = SpaceViewModel(space)
         viewModel.setContents(to: self)
+        positionLabel?.text = "\(space.position.row), \(space.position.column)"
     }
     
     func showAnimation(state: Space.State) {

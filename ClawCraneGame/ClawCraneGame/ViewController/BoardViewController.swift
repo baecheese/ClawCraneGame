@@ -21,7 +21,7 @@ class BoardViewController: BaseViewController {
     
     func setDefaultContents() {
         boardView = BoardView()
-        boardView.set(board: gameType.random())
+        boardView.set(board: SINGLE_GAME.random())
         boardBackgroundView?.addSubview(boardView)
         boardView.bindFrameToSuperviewBounds()
     }

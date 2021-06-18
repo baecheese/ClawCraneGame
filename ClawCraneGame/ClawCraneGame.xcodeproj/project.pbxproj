@@ -16,7 +16,7 @@
 		9909557A267B41F30053EEB2 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095579267B41F30053EEB2 /* NSObject.swift */; };
 		99095582267B42120053EEB2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095581267B42120053EEB2 /* BaseViewController.swift */; };
 		9909558D267B431F0053EEB2 /* MainGameTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9909558C267B431F0053EEB2 /* MainGameTypeView.swift */; };
-		99095592267B43520053EEB2 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095591267B43520053EEB2 /* GameType.swift */; };
+		99095592267B43520053EEB2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095591267B43520053EEB2 /* Game.swift */; };
 		99095598267B44FC0053EEB2 /* MainGameTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095597267B44FC0053EEB2 /* MainGameTypeViewModel.swift */; };
 		990955AD267B49190053EEB2 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990955AC267B49190053EEB2 /* BoardViewController.swift */; };
 		9959BEF0267C6E2800FC7B60 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEEF267C6E2800FC7B60 /* SpaceView.swift */; };
@@ -64,7 +64,7 @@
 		99095579267B41F30053EEB2 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		99095581267B42120053EEB2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9909558C267B431F0053EEB2 /* MainGameTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameTypeView.swift; sourceTree = "<group>"; };
-		99095591267B43520053EEB2 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		99095591267B43520053EEB2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		99095597267B44FC0053EEB2 /* MainGameTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameTypeViewModel.swift; sourceTree = "<group>"; };
 		990955AC267B49190053EEB2 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		9959BEEF267C6E2800FC7B60 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 				990955542679F6920053EEB2 /* Space.swift */,
 				99095559267B12C40053EEB2 /* Basket.swift */,
 				99E7A0BD2679EBFA0039DD9B /* Doll.swift */,
-				99095591267B43520053EEB2 /* GameType.swift */,
+				99095591267B43520053EEB2 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 				9909558D267B431F0053EEB2 /* MainGameTypeView.swift in Sources */,
 				9909555A267B12C40053EEB2 /* Basket.swift in Sources */,
 				990955552679F6920053EEB2 /* Space.swift in Sources */,
-				99095592267B43520053EEB2 /* GameType.swift in Sources */,
+				99095592267B43520053EEB2 /* Game.swift in Sources */,
 				9904A374267B4EF500D6673D /* BoardView.swift in Sources */,
 				990955AD267B49190053EEB2 /* BoardViewController.swift in Sources */,
 				99095598267B44FC0053EEB2 /* MainGameTypeViewModel.swift in Sources */,

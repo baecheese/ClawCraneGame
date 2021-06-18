@@ -96,8 +96,8 @@ class BoardViewModel {
     
     func moveLastDollToBasket(to parent: BoardView) throws {
         do {
+            guard let space = board.lastToFillSapace(columnNumber: cranePosition) else { throw Board.BoardError.invaildSpace }
             let doll = try board.moveLastDollToBasket(columnNumber: cranePosition)
-            guard let space = board.lastToFillSapace(columnNumber: cranePosition) else { return }
             guard let column = parent.boardStackView.subviews[space.position.column] as? UIStackView,
                   let spaceView = column.subviews[space.position.row] as? SpaceView else { return }
             spaceView.showAnimation(state: .bomb)
@@ -109,7 +109,8 @@ class BoardViewModel {
     
     private func showAddBasketAnimation(to parent: BoardView, doll: Doll) throws {
         guard let index = board.basket.lastIndex_vaildInputDoll else { throw Basket.BasketError.isFull }
-        guard let spaceView = parent.basketStackView.subviews[index] as? SpaceView else { return }
+        let lastStackIndex = board.basket.max - index // 아래로 쌓여야함
+        guard let spaceView = parent.basketStackView.subviews[lastStackIndex] as? SpaceView else { return }
         spaceView.showAnimation(state: .fill(image: doll.type.icon))
     }
     

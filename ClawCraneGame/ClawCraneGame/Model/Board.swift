@@ -10,6 +10,7 @@ import Foundation
 class Board {
     
     enum BoardError: Error {
+        case invaildSpace
         case invalidLength
         case emptyDoll
     }
@@ -73,7 +74,7 @@ class Board {
         
         self._columns = columns
         self._rows = rows
-        self._basket = Basket()
+        self._basket = Basket(length: columns.count)
     }
     
     /// "toColumn" is number. number start 1. not index.

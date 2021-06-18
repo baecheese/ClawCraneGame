@@ -7,7 +7,7 @@
 
 import UIKit
 
-var gameType: GameType = GameType.shared
+var SINGLE_GAME: Game = Game.shared
 
 class MainViewController: BaseViewController {
 

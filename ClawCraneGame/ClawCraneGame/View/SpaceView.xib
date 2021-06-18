@@ -19,15 +19,27 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-03-m79">
                     <rect key="frame" x="5" y="5" width="224" height="198"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE7-Yz-ZoL">
+                    <rect key="frame" x="0.0" y="188" width="234" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="rtJ-ks-Dp0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DE7-Yz-ZoL" secondAttribute="bottom" id="3dW-fc-TdF"/>
                 <constraint firstItem="Q8l-2W-ZpK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="6cq-rG-Mda"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q8l-2W-ZpK" secondAttribute="trailing" constant="5" id="DJw-kd-e4z"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dzr-03-m79" secondAttribute="bottom" constant="5" id="Exq-VU-4Px"/>
                 <constraint firstItem="dzr-03-m79" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="GeB-XQ-Nli"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dzr-03-m79" secondAttribute="trailing" constant="5" id="GkN-4g-Xaj"/>
+                <constraint firstItem="DE7-Yz-ZoL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MMj-tw-iqm"/>
                 <constraint firstItem="Q8l-2W-ZpK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="XS6-5j-aga"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DE7-Yz-ZoL" secondAttribute="trailing" id="Y1d-hV-jbQ"/>
                 <constraint firstItem="dzr-03-m79" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="j2t-I8-S50"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Q8l-2W-ZpK" secondAttribute="bottom" constant="5" id="vWc-00-eth"/>
             </constraints>
@@ -35,6 +47,7 @@
             <connections>
                 <outlet property="bombImage" destination="Q8l-2W-ZpK" id="TZ9-3v-Kp7"/>
                 <outlet property="iconImage" destination="dzr-03-m79" id="vik-f2-9ar"/>
+                <outlet property="positionLabel" destination="DE7-Yz-ZoL" id="hzA-pY-naX"/>
             </connections>
             <point key="canvasLocation" x="1.4492753623188408" y="-105.80357142857143"/>
         </view>
