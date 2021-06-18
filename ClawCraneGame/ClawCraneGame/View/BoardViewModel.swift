@@ -63,7 +63,6 @@ class BoardViewModel {
         parent.basketStackView?.alignment = .fill
         parent.basketStackView?.distribution = .fillEqually
         parent.basketStackView?.spacing = 1.0
-        parent.basketStackView?.backgroundColor = .systemYellow
         for index in 0...board.basket.max - 1 {
             let spaceView = SpaceView.instanceFromNib()
             let space = Space(rowIndex: index, columnIndex: 0, doll: nil)
@@ -76,6 +75,7 @@ class BoardViewModel {
         parent.addSubview(parent.craneView)
         parent.craneView.addWidth(constant: 40.0)
         parent.craneView.text = "▼"
+        parent.craneView.textAlignment = .center
         parent.craneView.font = UIFont.systemFont(ofSize: 40.0)
     }
     
@@ -88,16 +88,11 @@ class BoardViewModel {
         })
     }
     
-    // TODO: crane 모델 생성할 것
-    // 임시코드 : drection : false <-> true
-    func moveCraneAnimation(to parent: BoardView, right direction: Bool) {
-        moveCraneAnimation(to: parent, column: _cranePosition + ((true == direction ? 1 : -1)))
-    }
-    
     // 마지막 인형 바구니로 이동
     func moveLastDollToBasket(to parent: BoardView) throws {
         do {
-            guard false == board.basket.isFull else {
+            guard let lastDoll = board.lastDollToBoard(columnNumber: cranePosition),
+                  board.basket.isAddable(doll: lastDoll) else {
                 throw Basket.BasketError.isFull
             }
             guard let space = board.lastToFillSpace(columnNumber: cranePosition) else {
@@ -116,7 +111,7 @@ class BoardViewModel {
     }
     
     private func addBasket(to parent: BoardView, doll: Doll) throws {
-        guard false == board.basket.isFull else {
+        guard board.basket.isAddable(doll: doll) else {
             throw Basket.BasketError.isFull
         }
         do {
@@ -142,6 +137,6 @@ class BoardViewModel {
     }
     
     private func craneOffsetX(to parent: BoardView, column: Int) -> CGFloat {
-        return (spaceWidth(to: parent) * CGFloat(column - 1)) + spaceWidth(to: parent) / 2
+        return (spaceWidth(to: parent) * CGFloat(column - 1)) + (spaceWidth(to: parent) / 2.0) - (craneSize / 2.0)
     }
 }

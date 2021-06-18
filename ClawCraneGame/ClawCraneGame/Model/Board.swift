@@ -93,6 +93,16 @@ class Board {
         return nil
     }
     
+    func lastDollToBoard(columnNumber: Int) -> Doll? {
+        guard 0 < columnNumber,
+              columns.indices.contains(columnNumber - 1),
+              let index = lastIndexToFillSpace(columnNumber: columnNumber),
+              columns[columnNumber - 1].indices.contains(index) else {
+            return nil
+        }
+        return columns[columnNumber - 1][index].doll
+    }
+    
     @discardableResult
     func popLastDollToBoard(columnNumber: Int) throws -> Doll {
         guard 0 < columnNumber,

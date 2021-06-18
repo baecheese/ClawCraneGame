@@ -34,12 +34,16 @@ class BoardView: UIView {
         return viewModel.board.score
     }
     
+    func startCrane() {
+        viewModel.moveCraneAnimation(to: self, column: 1)
+    }
+    
     func moveCraneLeft() {
-        viewModel.moveCraneAnimation(to: self, right: false)
+        viewModel.moveCraneAnimation(to: self, column: viewModel.cranePosition - 1)
     }
     
     func moveCraneRight() {
-        viewModel.moveCraneAnimation(to: self, right: true)
+        viewModel.moveCraneAnimation(to: self, column: viewModel.cranePosition + 1)
     }
     
 }

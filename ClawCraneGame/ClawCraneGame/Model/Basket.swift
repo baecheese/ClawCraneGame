@@ -53,4 +53,8 @@ class Basket {
         }
     }
     
+    func isAddable(doll: Doll) -> Bool {
+        return _dolls.last == doll || dolls.count < max
+    }
+    
 }

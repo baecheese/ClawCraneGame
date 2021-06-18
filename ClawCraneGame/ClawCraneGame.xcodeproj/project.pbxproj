@@ -22,7 +22,6 @@
 		9959BEF0267C6E2800FC7B60 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEEF267C6E2800FC7B60 /* SpaceView.swift */; };
 		9959BEF2267C6E4700FC7B60 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9959BEF1267C6E4700FC7B60 /* SpaceView.xib */; };
 		9959BEF4267C6E7000FC7B60 /* SpaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEF3267C6E7000FC7B60 /* SpaceViewModel.swift */; };
-		9959BEF6267C6F5300FC7B60 /* CraneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEF5267C6F5300FC7B60 /* CraneView.swift */; };
 		99D9DDF3267B717B009880CC /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9DDF2267B717B009880CC /* BoardViewModel.swift */; };
 		99D9DDF8267B7968009880CC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9DDF7267B7968009880CC /* UIStackView.swift */; };
 		99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0792679EB490039DD9B /* AppDelegate.swift */; };
@@ -70,7 +69,6 @@
 		9959BEEF267C6E2800FC7B60 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
 		9959BEF1267C6E4700FC7B60 /* SpaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceView.xib; sourceTree = "<group>"; };
 		9959BEF3267C6E7000FC7B60 /* SpaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewModel.swift; sourceTree = "<group>"; };
-		9959BEF5267C6F5300FC7B60 /* CraneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneView.swift; sourceTree = "<group>"; };
 		99D9DDF2267B717B009880CC /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
 		99D9DDF7267B7968009880CC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		99E7A0762679EB490039DD9B /* ClawCraneGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClawCraneGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +124,6 @@
 				9959BEEF267C6E2800FC7B60 /* SpaceView.swift */,
 				9959BEF1267C6E4700FC7B60 /* SpaceView.xib */,
 				9959BEF3267C6E7000FC7B60 /* SpaceViewModel.swift */,
-				9959BEF5267C6F5300FC7B60 /* CraneView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,7 +367,6 @@
 				99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */,
 				9959BEF4267C6E7000FC7B60 /* SpaceViewModel.swift in Sources */,
 				99E7A0B12679EB850039DD9B /* Board.swift in Sources */,
-				9959BEF6267C6F5300FC7B60 /* CraneView.swift in Sources */,
 				99E7A07C2679EB490039DD9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

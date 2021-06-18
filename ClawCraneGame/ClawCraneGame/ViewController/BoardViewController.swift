@@ -19,11 +19,20 @@ class BoardViewController: BaseViewController {
         setDefaultContents()
     }
     
+    var isFirstLoad = true
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let _ = boardView, isFirstLoad else { return }
+        boardView.startCrane()
+        isFirstLoad = false
+    }
+    
     func setDefaultContents() {
         boardView = BoardView()
-        boardView.set(board: SINGLE_GAME.random())
         boardBackgroundView?.addSubview(boardView)
         boardView.bindFrameToSuperviewBounds()
+        boardView.set(board: SINGLE_GAME.random())
     }
     
     @IBAction func onTouchBackToMain(_ sender: UIButton) {
@@ -32,12 +41,10 @@ class BoardViewController: BaseViewController {
     
     @IBAction func onTouchLeft(_ sender: UIButton) {
         boardView.moveCraneLeft()
-        view.layoutIfNeeded()
     }
     
     @IBAction func onTouchRight(_ sender: UIButton) {
         boardView.moveCraneRight()
-        view.layoutIfNeeded()
     }
     
     @IBAction func onTouchCatch(_ sender: UIButton) {
