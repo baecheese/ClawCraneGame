@@ -17,11 +17,6 @@ class Basket {
     private var _disappearDolls: [Doll] = []
     private var _max: Int
     
-    var lastIndex_vaildInputDoll: Int? {
-        guard _dolls.count <= max else { return nil }
-        return _dolls.count
-    }
-    
     var dolls: [Doll] {
         return _dolls
     }
@@ -32,6 +27,10 @@ class Basket {
     
     var max: Int {
         return _max
+    }
+    
+    var isFull: Bool {
+        return _max == _dolls.count
     }
     
     var description: String {
@@ -53,4 +52,5 @@ class Basket {
             throw BasketError.isFull
         }
     }
+    
 }

@@ -27,13 +27,29 @@ class SpaceViewModel {
     
     func showAnimation(to parent: SpaceView, state: Space.State) {
         switch state {
-        case .empty: return
+        case .empty:
+            showEmptyAnimation(to: parent)
         case .fill(let image):
             showFillAnimation(to: parent, icon: image)
         case .bomb:
             showBombAnimation(to: parent)
         }
     }
+    
+    private func showEmptyAnimation(to parent: SpaceView) {
+        UIView.animate(
+            withDuration: 0.3,
+            animations: {
+                parent.iconImage?.alpha = 0.0
+                parent.bombImage?.alpha = 0.0
+            },
+            completion: { _ in
+                parent.iconImage?.image = nil
+                parent.iconImage?.alpha = 1.0
+            }
+        )
+    }
+    
     private func showFillAnimation(to parent: SpaceView, icon: UIImage?) {
         parent.iconImage?.alpha = 0.0
         parent.iconImage?.image = icon

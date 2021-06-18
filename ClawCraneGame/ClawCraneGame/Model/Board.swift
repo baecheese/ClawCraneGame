@@ -78,7 +78,7 @@ class Board {
     }
     
     /// "toColumn" is number. number start 1. not index.
-    func lastToFillSapace(columnNumber: Int) -> Space? {
+    func lastToFillSpace(columnNumber: Int) -> Space? {
         guard 0 < columnNumber, let index = lastIndexToFillSpace(columnNumber: columnNumber) else { return nil }
         return columns[columnNumber - 1][index]
     }
@@ -94,16 +94,22 @@ class Board {
     }
     
     @discardableResult
-    func moveLastDollToBasket(columnNumber: Int) throws -> Doll {
+    func popLastDollToBoard(columnNumber: Int) throws -> Doll {
         guard 0 < columnNumber,
-              let index = lastIndexToFillSpace(columnNumber: columnNumber) else { throw BoardError.invalidLength }
-        guard let lastDoll = columns[columnNumber - 1][index].pop() else { throw BoardError.emptyDoll }
-        do {
-            try _basket.add(doll: lastDoll)
-        } catch {
-            throw error
+              let index = lastIndexToFillSpace(columnNumber: columnNumber) else {
+            throw BoardError.invalidLength
+        }
+        guard let lastDoll = columns[columnNumber - 1][index].pop() else {
+            throw BoardError.emptyDoll
         }
         return lastDoll
     }
     
+    func addBasketDoll(doll: Doll) throws {
+        do {
+            try _basket.add(doll: doll)
+        } catch {
+            throw error
+        }
+    }
 }

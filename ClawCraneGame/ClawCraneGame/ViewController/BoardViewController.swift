@@ -45,7 +45,7 @@ class BoardViewController: BaseViewController {
             let score = try boardView.moveLastDollToBasket()
             scoreLabel.text = "scroe: \(score)"
         } catch {
-            print("basket is full")
+            print(error)
         }
     }
 }
