@@ -9,6 +9,11 @@ import Foundation
 
 class Board {
     
+    enum BoardError: Error {
+        case invalidLength
+        case emptyDoll
+    }
+    
     private var _columns: [[Space]]
     private var _rows: [[Space]]
     private var _basket: Basket
@@ -23,6 +28,10 @@ class Board {
     
     var dollsInBasket: [Doll] {
         return _basket.dolls
+    }
+    
+    var basket: Basket {
+        return _basket
     }
     
     var score: Int {
@@ -84,11 +93,15 @@ class Board {
     }
     
     @discardableResult
-    func moveLastDollToBasket(columnNumber: Int) -> Doll? {
+    func moveLastDollToBasket(columnNumber: Int) throws -> Doll {
         guard 0 < columnNumber,
-              let index = lastIndexToFillSpace(columnNumber: columnNumber),
-              let lastDoll = columns[columnNumber - 1][index].pop() else { return nil }
-        _basket.add(doll: lastDoll)
+              let index = lastIndexToFillSpace(columnNumber: columnNumber) else { throw BoardError.invalidLength }
+        guard let lastDoll = columns[columnNumber - 1][index].pop() else { throw BoardError.emptyDoll }
+        do {
+            try _basket.add(doll: lastDoll)
+        } catch {
+            throw error
+        }
         return lastDoll
     }
     

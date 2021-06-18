@@ -41,6 +41,11 @@ class BoardViewController: BaseViewController {
     }
     
     @IBAction func onTouchCatch(_ sender: UIButton) {
-        scoreLabel.text = "scroe: \(boardView.moveLastDollToBasket())"
+        do {
+            let score = try boardView.moveLastDollToBasket()
+            scoreLabel.text = "scroe: \(score)"
+        } catch {
+            print("basket is full")
+        }
     }
 }

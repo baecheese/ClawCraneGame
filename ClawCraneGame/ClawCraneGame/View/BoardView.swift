@@ -25,8 +25,12 @@ class BoardView: UIView {
     }
     
     @discardableResult
-    func moveLastDollToBasket() -> Int {
-        viewModel.moveLastDollToBasket(to: self)
+    func moveLastDollToBasket() throws -> Int {
+        do {
+            try viewModel.moveLastDollToBasket(to: self)
+        } catch {
+            throw error
+        }
         return viewModel.board.score
     }
     

@@ -11,7 +11,7 @@ class Space {
     
     enum State {
         case empty
-        case fill
+        case fill(image: UIImage?)
         case bomb
         
         var icon: UIImage? {
@@ -22,7 +22,6 @@ class Space {
                 return nil
             case .bomb:
                 return UIImage(named: "icon_bomb")
-                
             }
         }
     }

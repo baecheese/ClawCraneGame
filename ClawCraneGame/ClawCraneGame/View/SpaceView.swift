@@ -27,7 +27,7 @@ class SpaceView: UIView {
         viewModel.setContents(to: self)
     }
     
-    func update(state: Space.State) {
+    func showAnimation(state: Space.State) {
         viewModel.showAnimation(to: self, state: state)
     }
     
