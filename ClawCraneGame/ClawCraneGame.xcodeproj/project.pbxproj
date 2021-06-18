@@ -19,6 +19,10 @@
 		99095592267B43520053EEB2 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095591267B43520053EEB2 /* GameType.swift */; };
 		99095598267B44FC0053EEB2 /* MainGameTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99095597267B44FC0053EEB2 /* MainGameTypeViewModel.swift */; };
 		990955AD267B49190053EEB2 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990955AC267B49190053EEB2 /* BoardViewController.swift */; };
+		9959BEF0267C6E2800FC7B60 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEEF267C6E2800FC7B60 /* SpaceView.swift */; };
+		9959BEF2267C6E4700FC7B60 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9959BEF1267C6E4700FC7B60 /* SpaceView.xib */; };
+		9959BEF4267C6E7000FC7B60 /* SpaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEF3267C6E7000FC7B60 /* SpaceViewModel.swift */; };
+		9959BEF6267C6F5300FC7B60 /* CraneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959BEF5267C6F5300FC7B60 /* CraneView.swift */; };
 		99D9DDF3267B717B009880CC /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9DDF2267B717B009880CC /* BoardViewModel.swift */; };
 		99D9DDF8267B7968009880CC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D9DDF7267B7968009880CC /* UIStackView.swift */; };
 		99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E7A0792679EB490039DD9B /* AppDelegate.swift */; };
@@ -63,6 +67,10 @@
 		99095591267B43520053EEB2 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		99095597267B44FC0053EEB2 /* MainGameTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameTypeViewModel.swift; sourceTree = "<group>"; };
 		990955AC267B49190053EEB2 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		9959BEEF267C6E2800FC7B60 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
+		9959BEF1267C6E4700FC7B60 /* SpaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceView.xib; sourceTree = "<group>"; };
+		9959BEF3267C6E7000FC7B60 /* SpaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewModel.swift; sourceTree = "<group>"; };
+		9959BEF5267C6F5300FC7B60 /* CraneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraneView.swift; sourceTree = "<group>"; };
 		99D9DDF2267B717B009880CC /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
 		99D9DDF7267B7968009880CC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		99E7A0762679EB490039DD9B /* ClawCraneGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClawCraneGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +123,10 @@
 				99095597267B44FC0053EEB2 /* MainGameTypeViewModel.swift */,
 				9904A373267B4EF500D6673D /* BoardView.swift */,
 				99D9DDF2267B717B009880CC /* BoardViewModel.swift */,
+				9959BEEF267C6E2800FC7B60 /* SpaceView.swift */,
+				9959BEF1267C6E4700FC7B60 /* SpaceView.xib */,
+				9959BEF3267C6E7000FC7B60 /* SpaceViewModel.swift */,
+				9959BEF5267C6F5300FC7B60 /* CraneView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +325,7 @@
 			files = (
 				99E7A0862679EB4A0039DD9B /* LaunchScreen.storyboard in Resources */,
 				99E7A0832679EB4A0039DD9B /* Assets.xcassets in Resources */,
+				9959BEF2267C6E4700FC7B60 /* SpaceView.xib in Resources */,
 				99E7A0812679EB490039DD9B /* Main.storyboard in Resources */,
 				9909556C267B388A0053EEB2 /* DungGeunMo.ttf in Resources */,
 			);
@@ -344,6 +357,7 @@
 				99D9DDF8267B7968009880CC /* UIStackView.swift in Sources */,
 				99E7A0BE2679EBFA0039DD9B /* Doll.swift in Sources */,
 				99D9DDF3267B717B009880CC /* BoardViewModel.swift in Sources */,
+				9959BEF0267C6E2800FC7B60 /* SpaceView.swift in Sources */,
 				9909558D267B431F0053EEB2 /* MainGameTypeView.swift in Sources */,
 				9909555A267B12C40053EEB2 /* Basket.swift in Sources */,
 				990955552679F6920053EEB2 /* Space.swift in Sources */,
@@ -354,7 +368,9 @@
 				9904A396267B54E100D6673D /* UIView.swift in Sources */,
 				99095582267B42120053EEB2 /* BaseViewController.swift in Sources */,
 				99E7A07A2679EB490039DD9B /* AppDelegate.swift in Sources */,
+				9959BEF4267C6E7000FC7B60 /* SpaceViewModel.swift in Sources */,
 				99E7A0B12679EB850039DD9B /* Board.swift in Sources */,
+				9959BEF6267C6F5300FC7B60 /* CraneView.swift in Sources */,
 				99E7A07C2679EB490039DD9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

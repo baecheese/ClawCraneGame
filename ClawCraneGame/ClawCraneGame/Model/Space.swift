@@ -5,16 +5,35 @@
 //  Created by 배지영 on 2021/06/16.
 //
 
-import Foundation
+import UIKit
 
 class Space {
     
+    enum State {
+        case empty
+        case fill
+        case bomb
+        
+        var icon: UIImage? {
+            switch self {
+            case .empty:
+                return nil
+            case .fill:
+                return nil
+            case .bomb:
+                return UIImage(named: "icon_bomb")
+                
+            }
+        }
+    }
+    
     private var _rowIndex: Int
     private var _columnIndex: Int
+    
     var doll: Doll? = nil
     
     var description: String {
-        return "\((doll?.type.icon) ?? "⬛️")"
+        return "\((doll?.type.consolIcon) ?? "⬛️")"
     }
     
     var position: (column: Int, row: Int) {
