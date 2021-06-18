@@ -120,11 +120,11 @@ class BoardViewModel {
             throw Basket.BasketError.isFull
         }
         do {
+            let index = board.basket.max - board.basket.dolls.count
             if false == board.basket.dolls.isEmpty && board.basket.dolls.last == doll {
-                let lastIndex = board.basket.max - board.basket.dolls.count
-                showSpaceAnimation(to: parent.basketStackView, index: lastIndex, state: .bomb)
+                showSpaceAnimation(to: parent.basketStackView, index: index, state: .bomb)
             } else {
-                showSpaceAnimation(to: parent.basketStackView, index: board.basket.dolls.count, state: .fill(image: doll.type.icon))
+                showSpaceAnimation(to: parent.basketStackView, index: index - 1, state: .fill(image: doll.type.icon))
             }
             try board.addBasketDoll(doll: doll)
         } catch {
