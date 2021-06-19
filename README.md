@@ -6,4 +6,4 @@
         
 
 ## 1차 프로토타입
-![ex_screenshot](./ScreenShot/screenshot_1.gif)
+![ex_screenshot](./ScreenShot/screenshot_new.gif)

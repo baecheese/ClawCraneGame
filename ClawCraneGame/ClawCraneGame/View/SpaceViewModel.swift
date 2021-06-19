@@ -23,6 +23,7 @@ class SpaceViewModel {
         parent.iconImage?.image = _space.isEmpty ? nil : _space.doll?.type.icon
         parent.bombImage?.image = Space.State.bomb.icon
         parent.bombImage?.alpha = 0.0
+        parent.backgroundImage?.image = _space.type.backgroundImage
     }
     
     func showAnimation(to parent: SpaceView, state: Space.State) {

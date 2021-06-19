@@ -13,7 +13,7 @@ class Space {
         case inBoard
         case inBasket
         
-        var image: UIImage? {
+        var backgroundImage: UIImage? {
             switch self {
             case .inBoard:
                 return UIImage(named: "icon_wall")
