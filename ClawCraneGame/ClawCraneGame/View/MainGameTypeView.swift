@@ -12,13 +12,13 @@ class MainGameTypeView: UIView {
     @IBOutlet weak var typeLabel: UILabel?
     
     @IBAction func onTouchIncreaseGameType(_ sender: UIButton) {
-        gameType.increase()
-        typeLabel?.text = gameType.displayText
+        SINGLE_GAME.increase()
+        typeLabel?.text = SINGLE_GAME.displayText
     }
     
     @IBAction func onTouchDecreaseGameType(_ sender: UIButton) {
-        gameType.decrease()
-        typeLabel?.text = gameType.displayText
+        SINGLE_GAME.decrease()
+        typeLabel?.text = SINGLE_GAME.displayText
     }
     
 }

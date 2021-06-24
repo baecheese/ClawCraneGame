@@ -35,7 +35,7 @@ class BoardViewModel {
         //board stack view
         parent.boardStackView = UIStackView()
         parent.addSubview(parent.boardStackView)
-        parent.boardStackView.bindFrameToSuperviewBounds(top: 0.0, leading: 0.0, trailing: basketWidth, bottom: 0.0)
+        parent.boardStackView.bindFrameToSuperviewBounds(top: 0.0, leading: 0.0, trailing: basketWidth + 10.0, bottom: 0.0)
         parent.boardStackView?.axis = .horizontal
         parent.boardStackView?.alignment = .fill
         parent.boardStackView?.distribution = .fillEqually
@@ -47,15 +47,13 @@ class BoardViewModel {
             columnStackView.distribution = .fillEqually
             columnStackView.spacing = 1.0
             for index in 0...board.columns[column].count - 1 {
-                //TODO: space view
-                let space = UILabel()
-                space.text = board.columns[column][index].doll?.type.icon ?? "-"
-                space.backgroundColor = .white
-                space.textAlignment = .center
-                columnStackView.addArrangedSubview(space)
+                let spaceView = SpaceView.instanceFromNib()
+                spaceView.setContents(space: board.columns[column][index])
+                columnStackView.addArrangedSubview(spaceView)
             }
             parent.boardStackView.addArrangedSubview(columnStackView)
         }
+        
         // basket stack view
         parent.basketStackView = UIStackView()
         parent.addSubview(parent.basketStackView)
@@ -64,14 +62,20 @@ class BoardViewModel {
         parent.basketStackView?.axis = .vertical
         parent.basketStackView?.alignment = .fill
         parent.basketStackView?.distribution = .fillEqually
-        parent.basketStackView.spacing = 1.0
-        parent.basketStackView.backgroundColor = .systemYellow
+        parent.basketStackView?.spacing = 1.0
+        for index in 0...board.basket.max - 1 {
+            let spaceView = SpaceView.instanceFromNib()
+            let space = Space(rowIndex: index, columnIndex: 0, doll: nil, in: .inBasket)
+            spaceView.setContents(space: space)
+            parent.basketStackView?.addArrangedSubview(spaceView)
+        }
         
         // craneView
         parent.craneView = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: craneSize, height: craneSize))
         parent.addSubview(parent.craneView)
         parent.craneView.addWidth(constant: 40.0)
         parent.craneView.text = "▼"
+        parent.craneView.textAlignment = .center
         parent.craneView.font = UIFont.systemFont(ofSize: 40.0)
     }
     
@@ -84,36 +88,55 @@ class BoardViewModel {
         })
     }
     
-    // TODO: crane 모델 생성할 것
-    // 임시코드 : drection : false <-> true
-    func moveCraneAnimation(to parent: BoardView, right direction: Bool) {
-        moveCraneAnimation(to: parent, column: _cranePosition + ((true == direction ? 1 : -1)))
-    }
-    
-    func moveLastDollToBasket(to parent: BoardView) {
-        guard let space = board.lastToFillSapace(columnNumber: cranePosition) else { return }
-        guard let column = parent.boardStackView.subviews[space.position.column] as? UIStackView,
-              let spaceView = column.subviews[space.position.row] as? UILabel else { return }
-        //TODO: Hiden Animation
-        spaceView.text = "-"
-        spaceView.backgroundColor = .white
-        board.moveLastDollToBasket(columnNumber: cranePosition)
-        parent.basketStackView.removeAllSubviews()
-        for doll in board.dollsInBasket {
-            //TODO: space view
-            let label = UILabel()
-            label.text = doll.type.icon
-            parent.basketStackView.insertArrangedSubview(label, at: 0)
+    // 마지막 인형 바구니로 이동
+    func moveLastDollToBasket(to parent: BoardView) throws {
+        do {
+            guard let lastDoll = board.lastDollToBoard(columnNumber: cranePosition),
+                  board.basket.isAddable(doll: lastDoll) else {
+                throw Basket.BasketError.isFull
+            }
+            guard let space = board.lastToFillSpace(columnNumber: cranePosition) else {
+                throw Board.BoardError.invaildSpace
+            }
+            // board 애니메이션
+            guard let columnStackView = parent.boardStackView.subviews[space.position.column] as? UIStackView else { return }
+            showSpaceAnimation(to: columnStackView, index: space.position.row, state: .bomb)
+            
+            // board에서 꺼낸 인형
+            let pickedDoll = try board.popLastDollToBoard(columnNumber: cranePosition)
+            try addBasket(to: parent, doll: pickedDoll)// basket에 추가
+        } catch {
+            throw error
         }
-        print(cranePosition)
     }
     
+    private func addBasket(to parent: BoardView, doll: Doll) throws {
+        guard board.basket.isAddable(doll: doll) else {
+            throw Basket.BasketError.isFull
+        }
+        do {
+            let index = board.basket.max - board.basket.dolls.count
+            if false == board.basket.dolls.isEmpty && board.basket.dolls.last == doll {
+                showSpaceAnimation(to: parent.basketStackView, index: index, state: .bomb)
+            } else {
+                showSpaceAnimation(to: parent.basketStackView, index: index - 1, state: .fill(image: doll.type.icon))
+            }
+            try board.addBasketDoll(doll: doll)
+        } catch {
+            throw error
+        }
+    }
+    
+    private func showSpaceAnimation(to stackView: UIStackView, index: Int, state: Space.State) {
+        let spaceView = stackView.subviews[index] as? SpaceView
+        spaceView?.showAnimation(state: state)
+    }
     
     private func spaceWidth(to parent: BoardView) -> CGFloat {
         return parent.boardStackView.frame.width / CGFloat(board.columns.count)
     }
     
     private func craneOffsetX(to parent: BoardView, column: Int) -> CGFloat {
-        return (spaceWidth(to: parent) * CGFloat(column - 1)) + spaceWidth(to: parent) / 2
+        return (spaceWidth(to: parent) * CGFloat(column - 1)) + (spaceWidth(to: parent) / 2.0) - (craneSize / 2.0)
     }
 }

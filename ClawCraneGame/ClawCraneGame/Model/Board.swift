@@ -9,6 +9,12 @@ import Foundation
 
 class Board {
     
+    enum BoardError: Error {
+        case invaildSpace
+        case invalidLength
+        case emptyDoll
+    }
+    
     private var _columns: [[Space]]
     private var _rows: [[Space]]
     private var _basket: Basket
@@ -23,6 +29,10 @@ class Board {
     
     var dollsInBasket: [Doll] {
         return _basket.dolls
+    }
+    
+    var basket: Basket {
+        return _basket
     }
     
     var score: Int {
@@ -49,7 +59,7 @@ class Board {
             var row: [Space] = []
             for columnIndex in 0...board[rowIndex].count - 1 {
                 let doll = Doll(value: board[rowIndex][columnIndex])
-                let space = Space(rowIndex: rowIndex, columnIndex: columnIndex, doll: doll)
+                let space = Space(rowIndex: rowIndex, columnIndex: columnIndex, doll: doll, in: .inBoard)
                 // row cache
                 row.append(space)
                 // column cache
@@ -64,11 +74,11 @@ class Board {
         
         self._columns = columns
         self._rows = rows
-        self._basket = Basket()
+        self._basket = Basket(length: columns.count)
     }
     
     /// "toColumn" is number. number start 1. not index.
-    func lastToFillSapace(columnNumber: Int) -> Space? {
+    func lastToFillSpace(columnNumber: Int) -> Space? {
         guard 0 < columnNumber, let index = lastIndexToFillSpace(columnNumber: columnNumber) else { return nil }
         return columns[columnNumber - 1][index]
     }
@@ -83,13 +93,33 @@ class Board {
         return nil
     }
     
-    @discardableResult
-    func moveLastDollToBasket(columnNumber: Int) -> Doll? {
+    func lastDollToBoard(columnNumber: Int) -> Doll? {
         guard 0 < columnNumber,
+              columns.indices.contains(columnNumber - 1),
               let index = lastIndexToFillSpace(columnNumber: columnNumber),
-              let lastDoll = columns[columnNumber - 1][index].pop() else { return nil }
-        _basket.add(doll: lastDoll)
+              columns[columnNumber - 1].indices.contains(index) else {
+            return nil
+        }
+        return columns[columnNumber - 1][index].doll
+    }
+    
+    @discardableResult
+    func popLastDollToBoard(columnNumber: Int) throws -> Doll {
+        guard 0 < columnNumber,
+              let index = lastIndexToFillSpace(columnNumber: columnNumber) else {
+            throw BoardError.invalidLength
+        }
+        guard let lastDoll = columns[columnNumber - 1][index].pop() else {
+            throw BoardError.emptyDoll
+        }
         return lastDoll
     }
     
+    func addBasketDoll(doll: Doll) throws {
+        do {
+            try _basket.add(doll: doll)
+        } catch {
+            throw error
+        }
+    }
 }
