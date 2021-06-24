@@ -46,7 +46,7 @@ class BoardTests: XCTestCase {
         var score: Int = 0
         for columnNumber in moves {
             print("===== Pick Column Number \(columnNumber) ======")
-            let lastDoll = board.lastToFillSapace(columnNumber: columnNumber)?.doll
+            let lastDoll = board.lastToFillSpace(columnNumber: columnNumber)?.doll
             let doll = board.moveLastDollToBasket(columnNumber: columnNumber)
             print(board.description)
             XCTAssertEqual(lastDoll, doll)

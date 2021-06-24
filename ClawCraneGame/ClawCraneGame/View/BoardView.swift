@@ -25,17 +25,25 @@ class BoardView: UIView {
     }
     
     @discardableResult
-    func moveLastDollToBasket() -> Int {
-        viewModel.moveLastDollToBasket(to: self)
+    func moveLastDollToBasket() throws -> Int {
+        do {
+            try viewModel.moveLastDollToBasket(to: self)
+        } catch {
+            throw error
+        }
         return viewModel.board.score
     }
     
+    func startCrane() {
+        viewModel.moveCraneAnimation(to: self, column: 1)
+    }
+    
     func moveCraneLeft() {
-        viewModel.moveCraneAnimation(to: self, right: false)
+        viewModel.moveCraneAnimation(to: self, column: viewModel.cranePosition - 1)
     }
     
     func moveCraneRight() {
-        viewModel.moveCraneAnimation(to: self, right: true)
+        viewModel.moveCraneAnimation(to: self, column: viewModel.cranePosition + 1)
     }
     
 }

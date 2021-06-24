@@ -5,7 +5,7 @@
 //  Created by 배지영 on 2021/06/16.
 //
 
-import Foundation
+import UIKit
 
 class Doll {
     
@@ -18,23 +18,38 @@ class Doll {
     
     enum DollType: Int {
         case apple = 1
-        case pear = 2
-        case peach = 3
-        case melon = 4
-        case lemon = 5
+        case heart = 2
+        case potion = 3
+        case star = 4
+        case sword = 5
         
-        var icon: String {
+        var consolIcon: String {
             switch self {
                 case .apple:
                     return "🍎"
-                case .pear:
+                case .heart:
                     return "🍐"
-                case .peach:
+                case .potion:
                     return "🍑"
-                case .melon:
+                case .star:
                     return "🍈"
-                case .lemon:
+                case .sword:
                     return "🍋"
+            }
+        }
+        
+        var icon: UIImage? {
+            switch self {
+                case .apple:
+                    return UIImage(named: "icon_apple")
+                case .heart:
+                    return UIImage(named: "icon_heart")
+                case .potion:
+                    return UIImage(named: "icon_potion")
+                case .star:
+                    return UIImage(named: "icon_star")
+                case .sword:
+                    return UIImage(named: "icon_sword")
             }
         }
         

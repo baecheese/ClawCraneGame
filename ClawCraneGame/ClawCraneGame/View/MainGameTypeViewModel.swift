@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainGameTypeViewDataSource {
-    var gameType: GameType { get set }
+    var gameType: Game { get set }
 }
